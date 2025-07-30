@@ -1,5 +1,6 @@
 package com.ffanxxy.forge_enchantment.ExtraEnchantments.ForgeEnchantments;
 
+import com.ffanxxy.forge_enchantment.ExtraEnchantments.ForgeEnchantments.FE.FEnchantment;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 
@@ -11,8 +12,8 @@ public class ForgedEnchantment {
         this.id = id;
         this.level = level;
     }
-    public ForgedEnchantment(FE fe,int level) {
-        this.id = fe.id();
+    public ForgedEnchantment(FEnchantment FEnchantment, int level) {
+        this.id = FEnchantment.getId();
         this.level = level;
     }
 

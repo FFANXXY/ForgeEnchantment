@@ -1,7 +1,8 @@
 package com.ffanxxy.forge_enchantment.blocks;
 
-import com.ffanxxy.forge_enchantment.ExtraEnchantments.ForgeEnchantments.ForgedEnchantment;
 import com.ffanxxy.forge_enchantment.ForgeEnchantment;
+import com.ffanxxy.forge_enchantment.blockEntity.EnchantmentForgingTableBlockEntity;
+import com.ffanxxy.forge_enchantment.blocks.custom.EnchantmentForgingTable;
 import com.ffanxxy.forge_enchantment.items.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -17,8 +18,8 @@ public class ModBlocks {
     public static final DeferredRegister.Blocks BLOCKS =
             DeferredRegister.createBlocks(ForgeEnchantment.MODID);
 
-    public static final DeferredBlock<Block> FORGED_ENCHANTMENT_TABLE = registerBlock(
-            "forged_enchantment_table", () -> new Block(BlockBehaviour.Properties.of())
+    public static final DeferredBlock<Block> ENCHANTMENT_FORGING_TABLE = registerBlock(
+            "enchantment_forging_table", () -> new EnchantmentForgingTable(BlockBehaviour.Properties.of())
     );
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {

@@ -3,24 +3,16 @@ package com.ffanxxy.forge_enchantment.items;
 import com.ffanxxy.forge_enchantment.ForgeEnchantment;
 import com.ffanxxy.forge_enchantment.blocks.ModBlocks;
 import com.ffanxxy.forge_enchantment.enchantments.ModEnchantments;
-import com.ffanxxy.forge_enchantment.utils.ModEnchantmentHelper;
-import net.minecraft.advancements.critereon.ItemEnchantmentsPredicate;
 import net.minecraft.core.Holder;
-import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.nbt.Tag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.Enchantment;
-import net.minecraft.world.item.enchantment.EnchantmentInstance;
-import net.minecraft.world.item.enchantment.ItemEnchantments;
 import net.neoforged.bus.api.IEventBus;
-import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
-import java.util.List;
 import java.util.function.Supplier;
 
 public class ModCreativeModeTabs {
@@ -37,7 +29,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.WORDS_BOOK);
                         output.accept(ModItems.WORDS_PAPER);
                         output.accept(ModItems.MAGIC_PAPER);
-                        output.accept(ModBlocks.FORGED_ENCHANTMENT_TABLE);
+                        output.accept(ModBlocks.ENCHANTMENT_FORGING_TABLE);
 
                         Holder<Enchantment> infusionHolder =
                                 itemDisplayParameters.holders().lookup(Registries.ENCHANTMENT).get().getOrThrow(ModEnchantments.INFUSION);

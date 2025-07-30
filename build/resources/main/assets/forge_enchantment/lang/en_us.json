@@ -1,6 +1,6 @@
 {
-  "action..failed": "Something seems to be missing?",
   "action.to_magic": "Magicalization",
+  "action.to_magic.failed": "Something seems to be missing?",
   "action.to_magic.success": "The item in front of me changed its form...",
   "block.forge_enchantment.forged_enchantment_table": "Forged Enchantment Table",
   "creativetab.forge_enchantment.all_items": "Forge Enchantment",

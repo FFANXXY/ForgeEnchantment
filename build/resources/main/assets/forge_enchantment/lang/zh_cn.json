@@ -1,6 +1,6 @@
 {
-  "action..failed": "似乎缺少一些什么？",
   "action.to_magic": "魔化",
+  "action.to_magic.failed": "似乎缺少一些什么？",
   "action.to_magic.success": "眼前的物品变幻了形态...",
   "block.forge_enchantment.forged_enchantment_table": "铸魔台",
   "creativetab.forge_enchantment.all_items": "铸魔",

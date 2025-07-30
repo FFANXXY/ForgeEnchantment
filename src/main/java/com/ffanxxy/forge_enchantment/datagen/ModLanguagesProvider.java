@@ -11,7 +11,6 @@ import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.common.data.LanguageProvider;
 import net.neoforged.neoforge.registries.DeferredBlock;
-import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredItem;
 
 import java.util.HashMap;
@@ -112,7 +111,7 @@ public class ModLanguagesProvider {
                 "en_us", "Magic Paper",
                 "zh_cn", "注魔之纸"
         ));
-        LANG.put(getId(ModBlocks.FORGED_ENCHANTMENT_TABLE), Map.of(
+        LANG.put(getId(ModBlocks.ENCHANTMENT_FORGING_TABLE), Map.of(
                 "en_us", "Forged Enchantment Table",
                 "zh_cn", "铸魔台"
         ));

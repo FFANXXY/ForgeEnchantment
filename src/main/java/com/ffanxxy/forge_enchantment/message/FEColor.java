@@ -1,5 +1,10 @@
 package com.ffanxxy.forge_enchantment.message;
 
+/**
+ * @author FFANXXY
+ * 存储所有的颜色，包括生成颜色的方法
+ * store all the mod colors , including the methons to spawn the custom color
+ */
 public enum FEColor {
     LITTLE_PINK(16238583),
     UI_CYAN(15663100);

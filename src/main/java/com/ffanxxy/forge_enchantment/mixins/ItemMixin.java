@@ -8,6 +8,9 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
+/**
+ * 修改原版物品 Mixin for the Item
+ */
 @Mixin(Item.class)
 public class ItemMixin {
     @Inject(method = "isEnchantable", at = @At("HEAD"), cancellable = true)

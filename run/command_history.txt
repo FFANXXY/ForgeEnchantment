@@ -38,3 +38,4 @@
 /enchant @s forge_enchantment:infusion
 /forgenchantment
 /enchant @s forge_enchantment:infusion
+/data get block -136 78 -85
