@@ -1,0 +1,23 @@
+{
+  "action.to_magic": "魔化",
+  "action.to_magic.failed": "似乎缺少一些什么？",
+  "action.to_magic.success": "眼前的物品变幻了形态...",
+  "block.forge_enchantment.forged_enchantment_table": "铸魔台",
+  "creativetab.forge_enchantment.all_items": "铸魔",
+  "enchantment.forge_enchantment.infusion": "灌注",
+  "forge_enchantment.failed.no_ehc.enchantment_powder": "似乎没有什么特别的...",
+  "forge_enchantment.item.discrete": "离散性质: ",
+  "forge_enchantment.item.discrete.fictive": "虚构 ",
+  "forge_enchantment.item.discrete.fictive_more": "不存在的个体  ",
+  "forge_enchantment.item.discrete.fixed": "固定 ",
+  "forge_enchantment.item.discrete.fixed_more": "世界所决定的  ",
+  "forge_enchantment.success.laspis.enchantment_powder": "你似乎感受到了逸散的魔力... ",
+  "forge_enchantment.word_book_none": "古老的神秘图书，貌似没什么用？",
+  "gui.forge_enchantment.down_shift_more": "按住 §e[Shift]§r 查看详细",
+  "item.forge_enchantment.magic_paper": "注魔之纸",
+  "item.forge_enchantment.powder_of_lapis_lazuli": "青金石粉",
+  "item.forge_enchantment.words_book": "言之书",
+  "item.forge_enchantment.words_paper": "言之契",
+  "item.lapis_lazuli_powder.lore1": "一些神秘的微小碎片，似乎来自某个完整的个体？",
+  "item.redstone_powder.lore1": "一些具有神秘力量的粉末。"
+}

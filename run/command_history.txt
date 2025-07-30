@@ -1,0 +1,40 @@
+/give @s forge_enchantment:powder_of_lapis_lazuli
+/give @s
+/give @s forge_enchantment:powder_of_lapis_lazuli
+/enchant @s forge_enchantment:infusion
+/enchant @s forge_enchantment:infusion 3
+/enchant @s forge_enchantment:infusion 2
+/enchant @s forge_enchantment:infusion 1
+/give @s forge_enchantment:powder_of_lapis_lazuli
+/enchant @s forge_enchantment:infusion
+/enchant @s forge_enchantment:infusion 1
+/enchant @s forge_enchantment:infusion
+/enchant @s forge_enchantment:infusion 2
+/enchant @s forge_enchantment:infusion 1
+/enchant @s forge_enchantment:infusion 2
+/enchant @s forge_enchantment:infusion 1
+/enchant @s forge_enchantment:infusion 2
+/enchant @s forge_enchantment:infusion 3
+/enchant @s forge_enchantment:infusion 4
+/xp set @s 0
+/xp set @s 0 levels
+/xp set @s 0
+/enchant @s forge_enchantment:infusion 1
+/enchant @s forge_enchantment:infusion
+/data get entity @s SelectedItem
+/xp add @s 10 levels
+/enchant @s forge_enchantment:infusion 3
+/give @s minecraft:redstone
+/setblock ~ ~ ~ minecraft:redstone_block
+/setblock ~ ~ ~ minecraft:redstone_ore
+/data get entity @s SelectedItem
+/enchant @s forge_enchantment:infusion
+/forgenchantment @s 1
+/data get entity @s SelectedItem
+/forgenchantment @s 1
+/forgenchantment
+/forgenchantment @s
+/forgenchantment @s 1
+/enchant @s forge_enchantment:infusion
+/forgenchantment
+/enchant @s forge_enchantment:infusion

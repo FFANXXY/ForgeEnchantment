@@ -1,0 +1,23 @@
+{
+  "action..failed": "Something seems to be missing?",
+  "action.to_magic": "Magicalization",
+  "action.to_magic.success": "The item in front of me changed its form...",
+  "block.forge_enchantment.forged_enchantment_table": "Forged Enchantment Table",
+  "creativetab.forge_enchantment.all_items": "Forge Enchantment",
+  "enchantment.forge_enchantment.infusion": "Infusion",
+  "forge_enchantment.failed.no_ehc.enchantment_powder": "There doesn't seem to be anything special...",
+  "forge_enchantment.item.discrete": "Discrete: ",
+  "forge_enchantment.item.discrete.fictive": "FICTIVE ",
+  "forge_enchantment.item.discrete.fictive_more": "Non-existent individuals  ",
+  "forge_enchantment.item.discrete.fixed": "FIXED ",
+  "forge_enchantment.item.discrete.fixed_more": "The world decides  ",
+  "forge_enchantment.success.laspis.enchantment_powder": "You seem to feel the Dissipating Magical Power.",
+  "forge_enchantment.word_book_none": "An ancient mysterious book, seem to be useless?",
+  "gui.forge_enchantment.down_shift_more": "Press §e[Shift]§r for more Information",
+  "item.forge_enchantment.magic_paper": "Magic Paper",
+  "item.forge_enchantment.powder_of_lapis_lazuli": "Lapis Lazuli Powder",
+  "item.forge_enchantment.words_book": "Words Book",
+  "item.forge_enchantment.words_paper": "Words Paper",
+  "item.lapis_lazuli_powder.lore1": "Tiny fragments of mystical abilities that seem to come from some intact individual?",
+  "item.redstone_powder.lore1": "Some powder with mystical powers."
+}

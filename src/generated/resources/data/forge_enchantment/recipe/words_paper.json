@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "forge_enchantment:magic_paper"
+    },
+    {
+      "item": "forge_enchantment:magic_paper"
+    },
+    {
+      "item": "forge_enchantment:magic_paper"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "forge_enchantment:words_paper"
+  }
+}
