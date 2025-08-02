@@ -27,6 +27,9 @@ public class ForgedEnchantment {
     public String getId() {
         return this.id;
     }
+    public FEnchantment getAsFE() {
+       return ForgedEnchantments.getFEformId(id);
+    }
     public int getLevel() {
         return this.level;
     }

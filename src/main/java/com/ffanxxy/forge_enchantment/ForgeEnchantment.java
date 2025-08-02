@@ -12,6 +12,7 @@ import com.ffanxxy.forge_enchantment.items.ModItems;
 import com.mojang.logging.LogUtils;
 import net.minecraft.world.inventory.EnchantmentMenu;
 import net.neoforged.bus.api.IEventBus;
+import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.common.NeoForge;

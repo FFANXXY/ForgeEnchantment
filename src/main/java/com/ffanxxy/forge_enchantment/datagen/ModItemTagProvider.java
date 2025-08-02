@@ -29,5 +29,8 @@ public class ModItemTagProvider extends ItemTagsProvider {
                 .add(ModItems.LAPIS_LAZULI_POWDER.get())
                 .add(Items.REDSTONE)
                 .add(ModItems.MAGIC_PAPER.get());
+        tag(ModTags.Items.WORDS_ITEMS)
+                .add(ModItems.WORDS_PAPER.get())
+                .add(ModItems.WORDS_BOOK.get());
     }
 }

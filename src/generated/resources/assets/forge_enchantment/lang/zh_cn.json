@@ -2,7 +2,7 @@
   "action.to_magic": "魔化",
   "action.to_magic.failed": "似乎缺少一些什么？",
   "action.to_magic.success": "眼前的物品变幻了形态...",
-  "block.forge_enchantment.forged_enchantment_table": "铸魔台",
+  "block.forge_enchantment.enchantment_forging_table": "铸魔台",
   "creativetab.forge_enchantment.all_items": "铸魔",
   "enchantment.forge_enchantment.infusion": "灌注",
   "forge_enchantment.failed.no_ehc.enchantment_powder": "似乎没有什么特别的...",

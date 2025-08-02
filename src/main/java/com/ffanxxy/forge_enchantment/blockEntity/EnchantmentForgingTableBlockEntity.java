@@ -31,6 +31,13 @@ public class EnchantmentForgingTableBlockEntity extends BlockEntity {
         return itemHandler;
     }
 
+    public ItemStack getItemFromId(int slot) {
+        if(slot + 1 > itemHandler.getSlots() || slot < 0) {
+            return ItemStack.EMPTY;
+        }
+        return itemHandler.getStackInSlot(slot);
+    }
+
     // 获取非空物品列表（过滤空槽位）
     public List<ItemStack> getNonEmptyItems() {
         List<ItemStack> items = new ArrayList<>();
@@ -41,6 +48,16 @@ public class EnchantmentForgingTableBlockEntity extends BlockEntity {
             }
         }
         return items;
+    }
+
+    public int setItems(List<ItemStack> items) {
+        if (items.size() > itemHandler.getSlots()) {
+            return 0;
+        }
+        for (int i = 0; i < itemHandler.getSlots(); i++) {
+            itemHandler.insertItem(i, items.get(i), true);
+        }
+        return 1;
     }
 
     @Override

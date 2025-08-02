@@ -16,6 +16,7 @@ public class ModTags {
     }
     public static class Items {
         public static final TagKey<Item> ORE_POWDERS = createTag("ore_powders");
+        public static final TagKey<Item> WORDS_ITEMS = createTag("words_items");
 
         private static TagKey<Item> createTag(String name) {
             return ItemTags.create(ResourceLocation.fromNamespaceAndPath(ForgeEnchantment.MODID,name));
