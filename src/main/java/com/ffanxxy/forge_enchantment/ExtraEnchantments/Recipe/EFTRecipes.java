@@ -11,7 +11,7 @@ public class EFTRecipes {
     private static final List<EFTRecipe> recipes = new ArrayList<>();
 
     public static EFTRecipe WORDS_BOOK_RECIPE = new EFTRecipe(
-            new ItemStack(ModItems.WORDS_BOOK.get()),
+            new ItemStack(ModItems.WORDS_BOOK.get(), 1),
             50,
             new ItemStack(Items.DIAMOND,1),
             new ItemStack(Items.DIAMOND,1),
@@ -25,7 +25,9 @@ public class EFTRecipes {
         recipes.add(WORDS_BOOK_RECIPE);
     }
 
+    public static EFTRecipe EMPTY() {return new EFTRecipe();}
+
     public static List<EFTRecipe> getRecipes() {
-        return recipes;
+        return new ArrayList<>(recipes);
     }
 }

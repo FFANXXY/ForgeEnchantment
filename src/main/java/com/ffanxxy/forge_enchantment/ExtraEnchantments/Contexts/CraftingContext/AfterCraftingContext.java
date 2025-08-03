@@ -3,6 +3,7 @@ package com.ffanxxy.forge_enchantment.ExtraEnchantments.Contexts.CraftingContext
 import com.ffanxxy.forge_enchantment.ExtraEnchantments.Contexts.EffectContext;
 import com.ffanxxy.forge_enchantment.ExtraEnchantments.Recipe.EFTRecipe;
 import com.ffanxxy.forge_enchantment.ExtraEnchantments.Recipe.EFTRecipes;
+import com.ffanxxy.forge_enchantment.ExtraEnchantments.utils.Results.CraftResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
@@ -26,17 +27,23 @@ public class AfterCraftingContext implements EffectContext {
         this.raws = raws;
         this.useItem = useItem;
 
-        // 查找配方
-        this.recipe = EFTRecipes.getRecipes().stream().filter(eftRecipe -> {
-            return eftRecipe.canCraft(raws).getSuccess();
-        }).toList().getFirst();
-        var result = recipe.canCraft(raws);
-        this.CanCraft = result.getSuccess();
-
-        if (this.CanCraft) {
-            this.lastitem = result.getLast();
+        // 多次调用canCraft 消耗过大，考虑移到新线程
+        List<EFTRecipe> recipes = EFTRecipes.getRecipes().stream()
+                .filter(eftRecipe -> eftRecipe.canCraft(raws).getSuccess()).toList();
+        if(recipes.isEmpty()) {
+            this.recipe = EFTRecipes.EMPTY();
+            this.CanCraft = false;
+            this.lastitem = this.raws;
         } else {
-            this.lastitem = raws;
+            this.recipe = recipes.getFirst();
+            CraftResult result = recipe.canCraft(raws);
+            this.CanCraft = result.getSuccess();
+
+            if (this.CanCraft) {
+                this.lastitem = result.getLast();
+            } else {
+                this.lastitem = raws;
+            }
         }
     }
 
@@ -74,6 +81,10 @@ public class AfterCraftingContext implements EffectContext {
 
     public int getRecipeNeedTick() {
         return  recipe.getNeedtick();
+    }
+
+    public Boolean getCanCraft() {
+        return this.CanCraft;
     }
 
 }

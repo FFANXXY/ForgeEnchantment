@@ -5,7 +5,6 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.neoforge.items.IItemHandler;
 import net.neoforged.neoforge.items.ItemStackHandler;
@@ -31,7 +30,7 @@ public class EnchantmentForgingTableBlockEntity extends BlockEntity {
         return itemHandler;
     }
 
-    public ItemStack getItemFromId(int slot) {
+    public ItemStack getItemFromSlot(int slot) {
         if(slot + 1 > itemHandler.getSlots() || slot < 0) {
             return ItemStack.EMPTY;
         }
@@ -50,14 +49,10 @@ public class EnchantmentForgingTableBlockEntity extends BlockEntity {
         return items;
     }
 
-    public int setItems(List<ItemStack> items) {
-        if (items.size() > itemHandler.getSlots()) {
-            return 0;
-        }
+    public void setItems(List<ItemStack> items) {
         for (int i = 0; i < itemHandler.getSlots(); i++) {
-            itemHandler.insertItem(i, items.get(i), true);
+            itemHandler.setStackInSlot(i, items.get(i));
         }
-        return 1;
     }
 
     @Override

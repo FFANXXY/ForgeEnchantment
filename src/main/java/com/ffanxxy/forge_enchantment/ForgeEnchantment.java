@@ -18,9 +18,15 @@ import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.common.NeoForge;
 import org.slf4j.Logger;
 
-
+/**
+ * @author FFANXXY
+ * 编写此模组
+ * 千万注意封装！
+ *      千万不要把内部ItemStack作为返回值!!!!!!!!!!!!!!!!!!!!!!!!!!
+ */
 @Mod(ForgeEnchantment.MODID)
 public class ForgeEnchantment {
+
 
     public static final String MODID = "forge_enchantment";
 

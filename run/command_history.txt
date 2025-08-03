@@ -1,6 +1,4 @@
 /give @s forge_enchantment:powder_of_lapis_lazuli
-/give @s
-/give @s forge_enchantment:powder_of_lapis_lazuli
 /enchant @s forge_enchantment:infusion
 /enchant @s forge_enchantment:infusion 3
 /enchant @s forge_enchantment:infusion 2
@@ -45,3 +43,8 @@
 /forgenchantment @s hgf
 /data get block -130 78 -94
 /data get block -132 77 -95
+/data get block -142 78 -88
+/data get block -133 78 -83
+/data get block -132 78 -83
+/data get block -137 78 -86
+/data get block -142 78 -88

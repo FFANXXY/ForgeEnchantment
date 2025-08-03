@@ -6,6 +6,7 @@ import com.ffanxxy.forge_enchantment.blockEntity.EnchantmentForgingTableBlockEnt
 import com.ffanxxy.forge_enchantment.utils.ModTags;
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.ItemInteractionResult;
@@ -49,7 +50,7 @@ public class EnchantmentForgingTable extends BaseEntityBlock {
 
         if(blockEntity instanceof EnchantmentForgingTableBlockEntity efBE) {
             if(!(stack.is(ModTags.Items.WORDS_ITEMS))) {
-
+                // 添加物品
                 int size = efBE.getNonEmptyItems().size();
                 if (size >= 6) {
                     // 失败
@@ -65,7 +66,19 @@ public class EnchantmentForgingTable extends BaseEntityBlock {
             } else {
                 var context = AfterCraftingContext.create(level, player, efBE.getNonEmptyItems() , stack);
                 EFCraft crafter = new EFCraft(context);
+
+                // 处理
                 crafter.deal();
+
+                //配方检测
+                if(!crafter.getResult().getCanCraft() || crafter.getResult().getLastitem().isEmpty()) {
+                    if(level.isClientSide()) {
+                        player.displayClientMessage(Component.literal("不存在配方!"),false);
+                    }
+                    return ItemInteractionResult.FAIL;
+                }
+
+                if (level.isClientSide) return ItemInteractionResult.sidedSuccess(true);
 
                 giveItemToPlayer(player, crafter.getResult().getResultItemStack());
                 efBE.setItems(crafter.getResult().getLastitem());
